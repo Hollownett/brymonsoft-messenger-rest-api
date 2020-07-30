@@ -140,6 +140,7 @@ response (JSON):
    - userId - user ID
 
    delete user by his ID
+
    response (JSON):
 
    ```json
@@ -520,7 +521,7 @@ delete message in chat room by message id
 
 Path parameters:
 
-- chatRoomId - chat room ID
+- messageId - message ID
 
 response (JSON):
 
