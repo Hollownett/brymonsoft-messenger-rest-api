@@ -101,12 +101,13 @@ response (JSON):
 3. Search user by option (method GET) http://localhost:3000/users/searchUser/
 
    Query Params:
-   id - search for a user by his id
-   phoneNumber - search for a user by his phone number
-   lastName - search for a user by his last name
-   firstName - search for a user by his first name
-   fullName - search for a user by his full name
-   response (JSON):
+
+   - id - search for a user by his id
+   - phoneNumber - search for a user by his phone number
+   - lastName - search for a user by his last name
+   - firstName - search for a user by his first name
+   - fullName - search for a user by his full name
+     response (JSON):
 
    ```json
    {
@@ -155,8 +156,9 @@ response (JSON):
 1.  Create a new chat room(method POST) http://localhost:3000/room/initiate
 
     This is a protected route. A token is required in the headers:
-    key-authorization
-    value-user authToken
+
+    - key = authorization
+    - value = user authToken
 
     request body:
 
@@ -188,9 +190,7 @@ isNew - means if the room was created earlier
 
 2. Send message to chat room(method POST) http://localhost:3000/room/:<chatRoomId>/message
 
-This is a protected route. A token is required in the headers:
-key - authorization
-value - user authToken
+This is a protected route. A token is required in the headers: - key = authorization - value = user authToken
 
 response (JSON):
 
@@ -258,9 +258,7 @@ response (JSON):
 
 3.  Get chat room by chat rooms ID (method GET) http://localhost:3000/room/:<chatRoomId>/?page=0&limit=2
 
-        This is a protected route. A token is required in the headers:
-        key - authorization
-        value - user authToken
+This is a protected route. A token is required in the headers: - key = authorization - value = user authToken
 
         Query Params:
         page: conversation page
@@ -332,8 +330,9 @@ response (JSON):
 4. Mark message as read (method PUT)   http://localhost:3000/room/:<chatRoomId>/mark-read
 
    This is a protected route. A token is required in the headers:
-   key - authorization
-   value - user authToken
+     - key = authorization
+     - value = user authToken
+
 
    reeponse (JSON):
    ```json
