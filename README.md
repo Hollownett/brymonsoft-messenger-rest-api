@@ -131,7 +131,7 @@ response (JSON):
    }
    ```
 
-4. Delete user (method DELETE) http://localhost:3000/users/:<userId>
+4. Delete user (method DELETE) http://localhost:3000/users/:userId
 
    delete user by his ID
    response (JSON):
@@ -143,7 +143,7 @@ response (JSON):
    }
    ```
 
-5. login user by his ID (method POST) http://localhost:3000/login/:<userId>
+5. login user by his ID (method POST) http://localhost:3000/login/:userId
 
    using JWT authentication tokens
 
@@ -193,7 +193,7 @@ response (JSON) :
 
 isNew - means if the room was created earlier
 
-2. Send message to chat room(method POST) http://localhost:3000/room/:<chatRoomId>/message
+2. Send message to chat room(method POST) http://localhost:3000/room/:chatRoomId/message
 
    This is a protected route. A token is required in the headers:
 
@@ -264,7 +264,7 @@ response (JSON):
          "readByRecipients" - describes who read the message
          "chatRoomInfo" - contains information about chat room users
 
-3.  Get chat room by chat rooms ID (method GET) http://localhost:3000/room/:<chatRoomId>/?page=0&limit=2
+3.  Get chat room by chat rooms ID (method GET) http://localhost:3000/room/:chatRoomId/?page=0&limit=2
 
     This is a protected route. A token is required in the headers:
 
@@ -343,7 +343,7 @@ response (JSON):
 
     ```
 
-4.  Mark message as read (method PUT) http://localhost:3000/room/:<chatRoomId>/mark-read
+4.  Mark message as read (method PUT) http://localhost:3000/room/:chatRoomId/mark-read
 
     This is a protected route. A token is required in the headers:
 
@@ -378,7 +378,7 @@ reeponse (JSON):
 
 modify readByRecipients field in database and returns the number of fields changed
 
-5. Delete chat room by ID (method DELETE) http://localhost:3000/delete/message/:<chatRoomId>
+5. Delete chat room by ID (method DELETE) http://localhost:3000/delete/message/:chatRoomId
 
 delete chat room by chat room ID
 
@@ -393,7 +393,7 @@ response (JSON):
 }
 ```
 
-6. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:<messageId>
+6. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:messageId
 
    delete message in chat room by message id
 
