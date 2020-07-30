@@ -169,22 +169,22 @@ response (JSON):
     }
     ```
 
-````
- userIds - an array of users to be added to the chat room
- type - room type can be "consumer-to-support" or "consumer-to-consumer" or "consumer-to-bot"
+userIds - an array of users to be added to the chat room
+type - room type can be "consumer-to-support" or "consumer-to-consumer" or "consumer-to-bot"
 
- response (JSON) :
- ```json
- {
- "success": true,
- "chatRoom": {
- "isNew": false,
- "message": "retrieving an old chat room",
- "chatRoomId": "55ebabe69f5f4100bbbf762b1559b96c",
- "type": "consumer-to-consumer"
- }
- }
-````
+response (JSON) :
+
+```json
+{
+  "success": true,
+  "chatRoom": {
+    "isNew": false,
+    "message": "retrieving an old chat room",
+    "chatRoomId": "55ebabe69f5f4100bbbf762b1559b96c",
+    "type": "consumer-to-consumer"
+  }
+}
+```
 
 isNew - means if the room was created earlier
 
