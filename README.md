@@ -271,10 +271,12 @@ response (JSON):
     - key = authorization
     - value = user authToken
 
-      Query Params:
-      page: conversation page
-      limit: the number of last chat room messages that will be sent by the server in response
-      response (JSON):
+    Query Params:
+
+    - page: conversation page
+    - limit: the number of last chat room messages that will be sent by the server in response
+
+response (JSON):
 
       ```json
       {
@@ -378,17 +380,18 @@ modify readByRecipients field in database and returns the number of fields chang
 
 5. Delete chat room by ID (method DELETE) http://localhost:3000/delete/message/:<chatRoomId>
 
-```json
-   response (JSON):
-   {
-   "success": true,
-   "message": "Operation performed succesfully",
-   "deletedRoomsCount": 1,
-   "deletedMessagesCount": 2
-   }
-```
-
 delete chat room by chat room ID
+
+response (JSON):
+
+```json
+{
+  "success": true,
+  "message": "Operation performed succesfully",
+  "deletedRoomsCount": 1,
+  "deletedMessagesCount": 2
+}
+```
 
 6. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:<messageId>
 
