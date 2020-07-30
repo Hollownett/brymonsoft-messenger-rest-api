@@ -309,7 +309,8 @@ roomInfo contains array of users in the chat room
    }
    ```
 
-response (JSON):
+   sdssd
+   response (JSON):
 
 ```json
 {
