@@ -193,7 +193,93 @@ response (JSON) :
 
 isNew - means if the room was created earlier
 
-2. Send message to chat room(method POST) http://localhost:3000/room/:chatRoomId/message
+2. Get conversation list in chat room(method GET) http://localhost:3000/room/
+   This is a protected route. A token is required in the headers:
+
+   - key = authorization
+   - value = user authToken
+
+response (JSON): conversation list sorted by last message post date
+
+```json
+{
+  "success": true,
+  "conversation": [
+    {
+      "_id": "55ebabe69f5f4100bbbf762b1559b96c",
+      "messageId": "abd9513e1ebe4cadb597a2b9d43dcb62",
+      "chatRoomId": "55ebabe69f5f4100bbbf762b1559b96c",
+      "message": {
+        "messageText": "3. new room created"
+      },
+      "type": "text",
+      "postedByUser": {
+        "_id": "3e60d198d8d04d7fafc5e8637709da26",
+        "firstName": "John",
+        "lastName": "Doe",
+        "phoneNumber": "+375447902341",
+        "profileImage": "wedasdasdsdwe3q1",
+        "type": "consumer",
+        "createdAt": "2020-07-29T01:51:53.214Z",
+        "updatedAt": "2020-07-29T01:51:53.214Z",
+        "__v": 0
+      },
+      "readByRecipients": [
+        {
+          "readAt": "2020-07-30T04:15:54.675Z",
+          "readByUserId": "3e60d198d8d04d7fafc5e8637709da26",
+          "readByUser": [
+            {
+              "_id": "3e60d198d8d04d7fafc5e8637709da26",
+              "firstName": "John",
+              "lastName": "Doe",
+              "phoneNumber": "+375447902341",
+              "profileImage": "wedasdasdsdwe3q1",
+              "type": "consumer",
+              "createdAt": "2020-07-29T01:51:53.214Z",
+              "updatedAt": "2020-07-29T01:51:53.214Z",
+              "__v": 0
+            }
+          ]
+        }
+      ],
+      "roomInfo": [
+        [
+          {
+            "_id": "5bcc32d3ec394aed8285daee2fdec4b3",
+            "firstName": "Bob",
+            "lastName": "Bobovski",
+            "phoneNumber": "+3754411112222",
+            "profileImage": "imageUrl",
+            "type": "consumer",
+            "createdAt": "2020-07-29T23:51:19.951Z",
+            "updatedAt": "2020-07-29T23:51:19.951Z",
+            "__v": 0
+          }
+        ],
+        [
+          {
+            "_id": "3e60d198d8d04d7fafc5e8637709da26",
+            "firstName": "John",
+            "lastName": "Doe",
+            "phoneNumber": "+375447902341",
+            "profileImage": "wedasdasdsdwe3q1",
+            "type": "consumer",
+            "createdAt": "2020-07-29T01:51:53.214Z",
+            "updatedAt": "2020-07-29T01:51:53.214Z",
+            "__v": 0
+          }
+        ]
+      ],
+      "createdAt": "2020-07-30T04:20:23.598Z"
+    }
+  ]
+}
+```
+
+roomInfo contains array of users in the chat room
+
+3. Send message to chat room(method POST) http://localhost:3000/room/:chatRoomId/message
 
    This is a protected route. A token is required in the headers:
 
@@ -264,7 +350,7 @@ response (JSON):
          "readByRecipients" - describes who read the message
          "chatRoomInfo" - contains information about chat room users
 
-3.  Get chat room by chat rooms ID (method GET) http://localhost:3000/room/:chatRoomId/?page=0&limit=2
+4.  Get chat room by chat rooms ID (method GET) http://localhost:3000/room/:chatRoomId/?page=0&limit=2
 
     This is a protected route. A token is required in the headers:
 
@@ -343,7 +429,7 @@ response (JSON):
 
     ```
 
-4.  Mark message as read (method PUT) http://localhost:3000/room/:chatRoomId/mark-read
+5.  Mark message as read (method PUT) http://localhost:3000/room/:chatRoomId/mark-read
 
     This is a protected route. A token is required in the headers:
 
@@ -378,7 +464,7 @@ reeponse (JSON):
 
 modify readByRecipients field in database and returns the number of fields changed
 
-5. Delete chat room by ID (method DELETE) http://localhost:3000/delete/message/:chatRoomId
+6. Delete chat room by ID (method DELETE) http://localhost:3000/delete/room/:chatRoomId
 
 delete chat room by chat room ID
 
@@ -387,13 +473,13 @@ response (JSON):
 ```json
 {
   "success": true,
-  "message": "Operation performed succesfully",
+  "message": "Chat room deleted",
   "deletedRoomsCount": 1,
   "deletedMessagesCount": 2
 }
 ```
 
-6. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:messageId
+7. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:messageId
 
    delete message in chat room by message id
 
