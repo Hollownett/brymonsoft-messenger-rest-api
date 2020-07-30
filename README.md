@@ -131,7 +131,7 @@ response (JSON):
    }
    ```
 
-4. Delete user (method DELETE) http://localhost:3000/users/:userId
+4. Delete user (method DELETE) http://localhost:3000/users/":userId"
 
    delete user by his ID
    response (JSON):
