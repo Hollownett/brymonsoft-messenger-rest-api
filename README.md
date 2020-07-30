@@ -106,7 +106,7 @@ response (JSON):
 
 3. Search user by option (method GET) http://localhost:3000/users/searchUser/
 
-   Query Params:
+   Query parameters:
 
    - id - search for a user by his id
    - phoneNumber - search for a user by his phone number
@@ -135,6 +135,10 @@ response (JSON):
 
 4. Delete user (method DELETE) http://localhost:3000/users/":userId"
 
+   Path parameters:
+
+   - userId - user ID
+
    delete user by his ID
    response (JSON):
 
@@ -146,6 +150,10 @@ response (JSON):
    ```
 
 5. login user by his ID (method POST) http://localhost:3000/login/:userId
+
+   Path parameters:
+
+   - userId - user ID
 
    using JWT authentication tokens
 
@@ -289,6 +297,10 @@ roomInfo contains array of users in the chat room
    - key = "authorization"
    - value ="Bearer authToken"
 
+   Path parameters:
+
+   - chatRoomId - chat room ID
+
    Request body (JSON):
 
    ```json
@@ -368,7 +380,11 @@ response (JSON):
     - key = "authorization"
     - value ="Bearer authToken"
 
-    Query Params:
+    Path parameters:
+
+    - chatRoomId - chat room ID
+
+    Query parameters:
 
     - page: conversation page
     - limit: the number of last chat room messages that will be sent by the server in response
@@ -447,6 +463,10 @@ response (JSON):
     - key = "authorization"
     - value ="Bearer authToken"
 
+    Path parameters:
+
+    - chatRoomId - chat room ID
+
 reeponse (JSON):
 
 ```json
@@ -479,6 +499,10 @@ modify readByRecipients field in database and returns the number of fields chang
 
 delete chat room by chat room ID
 
+Path parameters:
+
+- chatRoomId - chat room ID
+
 response (JSON):
 
 ```json
@@ -493,6 +517,10 @@ response (JSON):
 7. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:messageId
 
 delete message in chat room by message id
+
+Path parameters:
+
+- chatRoomId - chat room ID
 
 response (JSON):
 
