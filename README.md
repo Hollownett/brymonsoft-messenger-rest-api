@@ -4,14 +4,14 @@
 2. Open a terminal in the root folder of the project and enter the command
 
 ```brew
-    "nmp install"
+    nmp install
 
 ```
 
 3.  enter in terminal command
 
 ```brew
-    "npm start"
+    npm start
 
 ```
 
