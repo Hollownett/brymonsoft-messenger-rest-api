@@ -293,7 +293,7 @@ roomInfo contains array of users in the chat room
 
    ```json
    {
-     "messageText": "4. message"
+     "messageText": "3. new room created"
    }
    ```
 
