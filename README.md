@@ -37,6 +37,8 @@ docker-compose up
 
 To create new user, we need to POST some JSON containing the details and configuration options.
 
+Request body (JSON):
+
 ```json
 {
   "firstName": "Platon",
@@ -286,6 +288,14 @@ roomInfo contains array of users in the chat room
 
    - key = "authorization"
    - value ="Bearer authToken"
+
+   Request body (JSON):
+
+   ```json
+   {
+     "messageText": "4. message"
+   }
+   ```
 
 response (JSON):
 
