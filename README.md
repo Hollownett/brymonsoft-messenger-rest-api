@@ -48,6 +48,7 @@ To create new user, we need to POST some JSON containing the details and configu
 ```
 
 type shows the user group, it can be a "consumer" , "support" or "bot"
+
 response (JSON):
 
 ```json
