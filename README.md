@@ -162,8 +162,8 @@ response (JSON):
 
     This is a protected route. A token is required in the headers:
 
-    - key = authorization
-    - value = user authToken
+    - key = "authorization"
+    - value ="Bearer authToken"
 
     request body:
 
@@ -197,8 +197,8 @@ isNew - means if the room was created earlier
 
    This is a protected route. A token is required in the headers:
 
-   - key = authorization
-   - value = user authToken
+   - key = "authorization"
+   - value ="Bearer authToken"
 
 response (JSON): conversation list sorted by last message post date
 
@@ -284,8 +284,8 @@ roomInfo contains array of users in the chat room
 
    This is a protected route. A token is required in the headers:
 
-   - key = authorization
-   - value = user authToken
+   - key = "authorization"
+   - value ="Bearer authToken"
 
 response (JSON):
 
@@ -355,8 +355,8 @@ response (JSON):
 
     This is a protected route. A token is required in the headers:
 
-    - key = authorization
-    - value = user authToken
+    - key = "authorization"
+    - value ="Bearer authToken"
 
     Query Params:
 
@@ -434,8 +434,8 @@ response (JSON):
 
     This is a protected route. A token is required in the headers:
 
-    - key = authorization
-    - value = user authToken
+    - key = "authorization"
+    - value ="Bearer authToken"
 
 reeponse (JSON):
 
