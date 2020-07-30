@@ -194,6 +194,7 @@ response (JSON) :
 isNew - means if the room was created earlier
 
 2. Get conversation list in chat room(method GET) http://localhost:3000/room/
+
    This is a protected route. A token is required in the headers:
 
    - key = authorization
