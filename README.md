@@ -482,13 +482,13 @@ response (JSON):
 
 7. Delete message by ID (method DELETE) http://localhost:3000/delete/message/:messageId
 
-   delete message in chat room by message id
+delete message in chat room by message id
 
-   response (JSON):
+response (JSON):
 
-   ```json
-   {
-     "success": true,
-     "deletedMessagesCount": 1
-   }
-   ```
+```json
+{
+  "success": true,
+  "deletedMessagesCount": 1
+}
+```
